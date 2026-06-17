@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Chevette EV Conversion — Three-Design Comparison</title>
+<meta name="description" content="Engineering comparison of three electric-conversion designs for the rear-drive Chevrolet Chevette, including two single-speed direct-drive builds, compared on cost, range, acceleration and top speed." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav">
+  <div class="wrap">
+    <div class="brand"><span class="bolt">⚡</span> Chevette&nbsp;EV</div>
+    <nav>
+      <a href="#donor">Donor</a>
+      <a href="#subsystems">Subsystems</a>
+      <a href="#designs">Designs</a>
+      <a href="#compare">Compare</a>
+      <a href="#charts">Charts</a>
+      <a href="#cost">Cost</a>
+      <a href="#method">Method</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" style="border-top:0">
+  <div class="wrap">
+    <span class="tag">EV Conversion Study · 1976–1987 Chevrolet Chevette</span>
+    <h1>Three ways to make a Chevette <span>electric</span>.</h1>
+    <p class="lead">The Chevette is a featherweight, rear-wheel-drive, body-on-a-budget subcompact — which makes it a near-ideal EV-swap donor. This study designs <strong>three complete conversions</strong>, selects every major subsystem component, and compares them head-to-head on cost, range, acceleration and top speed. Two of the three are <strong>single-speed direct-drive</strong> builds.</p>
+    <div class="hero-stats">
+      <div><b>~2,150 lb</b><span>Stock curb weight</span></div>
+      <div><b>RWD</b><span>Solid rear axle</span></div>
+      <div><b>3</b><span>Complete designs</span></div>
+      <div><b>2</b><span>Direct-drive builds</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DONOR ================= -->
+<section id="donor">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">The Platform</div>
+      <h2>Why the Chevette is a great EV donor</h2>
+      <p class="muted">Three traits matter for a conversion: low mass, a simple rear-drive layout, and a roomy engine bay. The Chevette has all three, plus a body-on-frame-style subframe that takes battery boxes well.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card reveal">
+        <h3>Light &amp; simple</h3>
+        <p class="muted">At roughly 2,150 lb stock, the Chevette weighs less than a modern compact. Pulling the 1.6 L iron four, gearbox-optional layout, fuel tank, exhaust and radiator removes ~350 lb before any battery goes in.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Rear-wheel drive</h3>
+        <p class="muted">A longitudinal engine driving a solid rear axle is the easiest layout to electrify: a motor can be coupled to the original gearbox, bolted to the differential, or replaced wholesale by an integrated drive unit.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Honest geometry</h3>
+        <p class="muted">A long-ish 94.3&nbsp;in wheelbase, flat floors and a deep transmission tunnel give clean places to mount packs low and centred, keeping the centre of gravity sane as weight is added.</p>
+      </div>
+    </div>
+    <div class="callout reveal">
+      <span class="pill">Design target</span>&nbsp; Every build below targets a road-legal, daily-drivable car that keeps the Chevette's ~50/50-ish balance, uses commercially available conversion parts, and runs a modern lithium pack with a real BMS.
+    </div>
+  </div>
+</section>
+
+<!-- ================= SUBSYSTEMS ================= -->
+<section id="subsystems">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Component Selection</div>
+      <h2>The major subsystems</h2>
+      <p class="muted">An EV conversion is a system of ~12 subsystems. Below is what each one does and the menu of parts the three designs draw from.</p>
+    </div>
+    <div class="subsys">
+      <div class="item reveal"><h4><span class="ico">◆</span> Traction motor</h4><p>Converts electrical to mechanical power. Choices span a NetGain HyPer&nbsp;9 HV (SRIPM, 90&nbsp;kW / 162&nbsp;lb-ft) up to a salvaged Tesla Large Drive Unit (induction, ~310&nbsp;kW).</p></div>
+      <div class="item reveal"><h4><span class="ico">◆</span> Inverter / controller (VCU)</h4><p>Turns pack DC into 3-phase AC and runs the torque map and regen. HyPer-Drive X144 for the HyPer&nbsp;9; an AEM EV VCU + LDU control board for the Tesla unit.</p></div>
+      <div class="item reveal"><h4><span class="ico">◆</span> Drivetrain coupling</h4><p>Either a <strong>direct-drive</strong> single ratio (motor → differential, or an integrated drive unit) or the retained 4-speed manual via an adapter plate for gear multiplication.</p></div>
+      <div class="item reveal"><h4><span class="ico">◆</span> Battery pack</h4><p>Energy storage. LiFePO4 prismatic cells for safety/longevity on a budget, or higher-density Tesla NMC modules for range and power.</p></div>
+      <div class="item reveal"><h4><span class="ico">◆</span> Battery management (BMS)</h4><p>Cell balancing, temperature and over/under-voltage protection. A distributed Orion / JK / Tesla-native BMS depending on chemistry.</p></div>
+      <div class="item reveal"><h4><span class="ico">◆</span> On-board charger</h4><p>Rectifies AC mains to charge the pack. 3.3&nbsp;kW (Level&nbsp;1/2) up to an 11&nbsp;kW unit for the big pack, behind a J1772 inlet.</p></div>
+      <div class="item reveal"><h4><span class="ico">◆</span> DC-DC converter</h4><p>Steps the HV pack down to 12–14&nbsp;V to run lights, wipers and accessories in place of the alternator.</p></div>
+      <div class="item reveal"><h4><span class="ico">◆</span> Cabin heat &amp; A/C</h4><p>A PTC ceramic heater replaces the coolant heater core; an optional electric A/C compressor on the larger build.</p></div>
+      <div class="item reveal"><h4><span class="ico">◆</span> Brakes &amp; vacuum</h4><p>An electric vacuum pump feeds the booster; the controllers add regenerative braking to recover energy.</p></div>
+      <div class="item reveal"><h4><span class="ico">◆</span> HV safety</h4><p>Main contactors, a HV fuse, manual service disconnect (MSD), inertia switch and shielded orange cabling — non-negotiable on every build.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DESIGNS ================= -->
+<section id="designs">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">The Three Builds</div>
+      <h2>Pick your Chevette</h2>
+      <p class="muted">A budget direct-drive commuter, a gearbox-retained sport build, and a Tesla-powered GT. Two are direct-drive; the middle one keeps the manual for gear multiplication.</p>
+    </div>
+    <div class="grid g3">
+
+      <!-- DESIGN 1 -->
+      <div class="card feature top-border-d1 reveal">
+        <div class="top">
+          <span class="badge bg-d1">Direct Drive · Budget</span>
+          <h3>1 · "Commuter"</h3>
+          <div class="sub">Single-speed AC · LiFePO4</div>
+          <div class="price">$15,800 <small>est. parts</small></div>
+        </div>
+        <ul class="spec-list">
+          <li><span>Motor</span><span>NetGain HyPer 9 HV</span></li>
+          <li><span>Drivetrain</span><span class="d1">Direct to diff (no gearbox)</span></li>
+          <li><span>Pack</span><span>144 V · 20 kWh LiFePO4</span></li>
+          <li><span>Power (peak)</span><span>90 kW / 121 hp</span></li>
+          <li><span>0–60 mph</span><span>~12.5 s</span></li>
+          <li><span>Top speed</span><span>72 mph</span></li>
+          <li><span>Range</span><span>~70 mi</span></li>
+          <li><span>Curb weight</span><span>~2,120 lb</span></li>
+        </ul>
+      </div>
+
+      <!-- DESIGN 2 -->
+      <div class="card feature top-border-d2 reveal">
+        <div class="top">
+          <span class="badge bg-d2">Gearbox-Retained · Sport</span>
+          <h3>2 · "Sport"</h3>
+          <div class="sub">4-speed manual · NMC</div>
+          <div class="price">$22,500 <small>est. parts</small></div>
+        </div>
+        <ul class="spec-list">
+          <li><span>Motor</span><span>NetGain HyPer 9 HV</span></li>
+          <li><span>Drivetrain</span><span class="d2">Stock 4-spd (adapter plate)</span></li>
+          <li><span>Pack</span><span>144 V · 30 kWh NMC</span></li>
+          <li><span>Power (peak)</span><span>90 kW / 121 hp</span></li>
+          <li><span>0–60 mph</span><span>~7.8 s</span></li>
+          <li><span>Top speed</span><span>90 mph</span></li>
+          <li><span>Range</span><span>~105 mi</span></li>
+          <li><span>Curb weight</span><span>~2,250 lb</span></li>
+        </ul>
+      </div>
+
+      <!-- DESIGN 3 -->
+      <div class="card feature top-border-d3 reveal">
+        <div class="top">
+          <span class="badge bg-d3">Direct Drive · GT</span>
+          <h3>3 · "GT"</h3>
+          <div class="sub">Tesla drive unit · big NMC</div>
+          <div class="price">$41,000 <small>est. parts</small></div>
+        </div>
+        <ul class="spec-list">
+          <li><span>Motor</span><span>Tesla Large Drive Unit</span></li>
+          <li><span>Drivetrain</span><span class="d3">Integrated 9.73:1 (direct)</span></li>
+          <li><span>Pack</span><span>400 V · 75 kWh NMC</span></li>
+          <li><span>Power (peak)</span><span>310 kW / 415 hp</span></li>
+          <li><span>0–60 mph</span><span>~4.3 s</span></li>
+          <li><span>Top speed</span><span>125 mph (limited)</span></li>
+          <li><span>Range</span><span>~215 mi</span></li>
+          <li><span>Curb weight</span><span>~2,710 lb</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid g3" style="margin-top:20px">
+      <div class="card reveal">
+        <h3 class="d1">Why direct drive here</h3>
+        <p class="muted small">The HyPer 9 makes full torque from zero rpm, so the gearbox is optional. Deleting it and coupling the motor straight to the original differential saves weight, cost and a failure point. The trade-off is no gear multiplication — launch and hill-climb suffer, and top speed is capped by motor rpm against the fixed final drive.</p>
+      </div>
+      <div class="card reveal">
+        <h3 class="d2">Why keep the gearbox</h3>
+        <p class="muted small">Bolting the same motor to the stock 4-speed via an adapter plate multiplies torque in the low gears. The result is markedly quicker acceleration and confident grades from the <em>same</em> motor — at the cost of added mass, an adapter plate, and the need to shift (or clutchless up-shift).</p>
+      </div>
+      <div class="card reveal">
+        <h3 class="d3">Why a Tesla unit</h3>
+        <p class="muted small">A salvaged Tesla Large Drive Unit is a self-contained motor, single-speed reduction and differential — the EV equivalent of an LS swap. It is inherently direct drive. It demands the most fabrication (the solid axle is replaced and an aftermarket VCU added) but transforms the car.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPARE TABLE ================= -->
+<section id="compare">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Head to Head</div>
+      <h2>Full comparison</h2>
+      <p class="muted">Every major metric, side by side. Best-in-row value highlighted in green.</p>
+    </div>
+    <div class="table-scroll reveal">
+      <table>
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>1 · Commuter <span class="d1">(direct)</span></th>
+            <th>2 · Sport <span class="d2">(gearbox)</span></th>
+            <th>3 · GT <span class="d3">(direct)</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="metric">Drivetrain layout</td><td>Single-speed, motor→diff</td><td>Stock 4-speed manual</td><td>Integrated single-speed unit</td></tr>
+          <tr><td class="metric">Traction motor</td><td>HyPer 9 HV (SRIPM)</td><td>HyPer 9 HV (SRIPM)</td><td>Tesla LDU (AC induction)</td></tr>
+          <tr><td class="metric">Inverter / VCU</td><td>HyPer-Drive X144</td><td>HyPer-Drive X144</td><td>AEM EV VCU + LDU board</td></tr>
+          <tr><td class="metric">Peak power</td><td>90 kW (121 hp)</td><td>90 kW (121 hp)</td><td class="win">310 kW (415 hp)</td></tr>
+          <tr><td class="metric">Peak torque (motor)</td><td>220 Nm</td><td>220 Nm × gearing</td><td class="win">~600 Nm</td></tr>
+          <tr><td class="metric">Battery chemistry</td><td>LiFePO4 prismatic</td><td>NMC modules</td><td>NMC modules</td></tr>
+          <tr><td class="metric">Pack voltage</td><td>144 V</td><td>144 V</td><td class="win">400 V</td></tr>
+          <tr><td class="metric">Usable capacity</td><td>20 kWh</td><td>30 kWh</td><td class="win">75 kWh</td></tr>
+          <tr><td class="metric">On-board charger</td><td>3.3 kW</td><td>6.6 kW</td><td class="win">11 kW</td></tr>
+          <tr><td class="metric">0–60 mph</td><td>~12.5 s</td><td>~7.8 s</td><td class="win">~4.3 s</td></tr>
+          <tr><td class="metric">Top speed</td><td>72 mph</td><td>90 mph</td><td class="win">125 mph (limited)</td></tr>
+          <tr><td class="metric">Range (mixed)</td><td>~70 mi</td><td>~105 mi</td><td class="win">~215 mi</td></tr>
+          <tr><td class="metric">Efficiency</td><td class="win">~280 Wh/mi</td><td>~285 Wh/mi</td><td>~330 Wh/mi</td></tr>
+          <tr><td class="metric">Curb weight</td><td class="win">~2,120 lb</td><td>~2,250 lb</td><td>~2,710 lb</td></tr>
+          <tr><td class="metric">Weight balance</td><td>~52 / 48</td><td>~53 / 47</td><td>~48 / 52</td></tr>
+          <tr><td class="metric">Fabrication effort</td><td class="win">Low</td><td>Medium</td><td>High</td></tr>
+          <tr><td class="metric">Est. parts cost</td><td class="win">$15,800</td><td>$22,500</td><td>$41,000</td></tr>
+          <tr><td class="metric">Cost per mile of range</td><td>$226</td><td class="win">$214</td><td>$191</td></tr>
+        </tbody>
+        <caption>All performance figures are engineering estimates for the stated configuration; see the Methodology section. "Cost per mile of range" = est. parts cost ÷ range.</caption>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CHARTS ================= -->
+<section id="charts">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Visualised</div>
+      <h2>The trade-offs at a glance</h2>
+      <p class="muted">More money buys more of everything — but the direct-drive commuter wins efficiency and the gearbox build offers the best balance of pace-per-dollar.</p>
+    </div>
+
+    <div class="grid g2">
+      <div class="card">
+        <div class="chart">
+          <h4>Estimated parts cost <span class="unit">· USD (lower is better)</span></h4>
+          <div class="bar-row"><div class="lbl">1 · Commuter</div><div class="bar-track"><div class="bar-fill bar-d1" data-pct="38.5">$15.8k</div></div></div>
+          <div class="bar-row"><div class="lbl">2 · Sport</div><div class="bar-track"><div class="bar-fill bar-d2" data-pct="54.9">$22.5k</div></div></div>
+          <div class="bar-row"><div class="lbl">3 · GT</div><div class="bar-track"><div class="bar-fill bar-d3" data-pct="100">$41.0k</div></div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="chart">
+          <h4>Range <span class="unit">· miles (higher is better)</span></h4>
+          <div class="bar-row"><div class="lbl">1 · Commuter</div><div class="bar-track"><div class="bar-fill bar-d1" data-pct="32.6">70</div></div></div>
+          <div class="bar-row"><div class="lbl">2 · Sport</div><div class="bar-track"><div class="bar-fill bar-d2" data-pct="48.8">105</div></div></div>
+          <div class="bar-row"><div class="lbl">3 · GT</div><div class="bar-track"><div class="bar-fill bar-d3" data-pct="100">215</div></div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="chart">
+          <h4>0–60 mph <span class="unit">· seconds (shorter bar is faster)</span></h4>
+          <div class="bar-row"><div class="lbl">1 · Commuter</div><div class="bar-track"><div class="bar-fill bar-d1" data-pct="100">12.5 s</div></div></div>
+          <div class="bar-row"><div class="lbl">2 · Sport</div><div class="bar-track"><div class="bar-fill bar-d2" data-pct="62.4">7.8 s</div></div></div>
+          <div class="bar-row"><div class="lbl">3 · GT</div><div class="bar-track"><div class="bar-fill bar-d3" data-pct="34.4">4.3 s</div></div></div>
+          <div class="note-inline">Bar length is proportional to time, so a shorter bar means quicker.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="chart">
+          <h4>Top speed <span class="unit">· mph (higher is better)</span></h4>
+          <div class="bar-row"><div class="lbl">1 · Commuter</div><div class="bar-track"><div class="bar-fill bar-d1" data-pct="57.6">72</div></div></div>
+          <div class="bar-row"><div class="lbl">2 · Sport</div><div class="bar-track"><div class="bar-fill bar-d2" data-pct="72">90</div></div></div>
+          <div class="bar-row"><div class="lbl">3 · GT</div><div class="bar-track"><div class="bar-fill bar-d3" data-pct="100">125</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COST BREAKDOWN ================= -->
+<section id="cost">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Where the Money Goes</div>
+      <h2>Cost breakdown by subsystem</h2>
+      <p class="muted">Component-level estimates in USD (mid-2026), parts only — donor car and your own labour excluded. Salvage Tesla parts vary widely; refurbished-with-warranty pricing is assumed for the GT.</p>
+    </div>
+    <div class="table-scroll reveal">
+      <table>
+        <thead>
+          <tr><th>Subsystem</th><th>1 · Commuter</th><th>2 · Sport</th><th>3 · GT</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="metric">Motor + inverter/VCU</td><td>$6,000</td><td>$6,000</td><td>$8,000</td></tr>
+          <tr><td class="metric">Drivetrain coupling</td><td>$900</td><td>$1,200</td><td>$3,500</td></tr>
+          <tr><td class="metric">Battery + BMS</td><td>$4,500</td><td>$8,500</td><td>$16,000</td></tr>
+          <tr><td class="metric">Charger + DC-DC</td><td>$1,200</td><td>$1,800</td><td>$2,500</td></tr>
+          <tr><td class="metric">HV wiring, contactors, fuses</td><td>$1,000</td><td>$1,200</td><td>$1,800</td></tr>
+          <tr><td class="metric">Throttle, instruments, heat/AC, vacuum</td><td>$900</td><td>$1,000</td><td>$2,200</td></tr>
+          <tr><td class="metric">Enclosures, mounts, fabrication</td><td>$800</td><td>$1,300</td><td>$3,000</td></tr>
+          <tr><td class="metric">Suspension / brake upgrades</td><td>—</td><td>$500</td><td>$2,000</td></tr>
+          <tr><td class="metric">Contingency / consumables</td><td>$500</td><td>$1,000</td><td>$2,000</td></tr>
+          <tr style="font-weight:800"><td class="metric">Total (est.)</td><td class="d1">$15,800</td><td class="d2">$22,500</td><td class="d3">$41,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout warn reveal">
+      <span class="pill">Reality check</span>&nbsp; Real conversions routinely run 15–30% over a parts budget once adapters, brackets, fasteners and "do-overs" are counted. Salvage Tesla drive units can be had for $500–$1,500, which can cut the GT total substantially if you accept no warranty and more bench work.
+    </div>
+  </div>
+</section>
+
+<!-- ================= RECOMMENDATION ================= -->
+<section id="verdict">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">The Verdict</div>
+      <h2>Which one should you build?</h2>
+    </div>
+    <div class="grid g3">
+      <div class="card reveal top-border-d1">
+        <h3 class="d1">Pick Commuter if…</h3>
+        <p class="muted small">…you want the cheapest, simplest, lightest path to a clean, reliable around-town EV, your trips are under ~30 miles each way, and you value efficiency and low fabrication over straight-line speed.</p>
+      </div>
+      <div class="card reveal top-border-d2">
+        <h3 class="d2">Pick Sport if…</h3>
+        <p class="muted small">…you want the best all-round driver — genuinely quick, freeway-capable, ~100-mile range — and you enjoy rowing a gearbox. It is the sweet spot for pace-and-range per dollar.</p>
+      </div>
+      <div class="card reveal top-border-d3">
+        <h3 class="d3">Pick GT if…</h3>
+        <p class="muted small">…you want a giant-killer: sub-4.5 s to 60, 200+ mile range, fast charging, and you have the budget, skills and tools for serious rear-end and HV fabrication.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= METHODOLOGY ================= -->
+<section id="method">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">How These Numbers Were Made</div>
+      <h2>Methodology &amp; assumptions</h2>
+    </div>
+    <div class="grid g2">
+      <div class="card reveal">
+        <h3>Performance modelling</h3>
+        <p class="muted small">Acceleration is estimated from motor torque, drivetrain ratio and modelled curb weight using a simple tractive-force model with a ~0.85 traction/driveline efficiency factor; top speed from peak motor rpm against the final-drive ratio and rolling/aero drag. Range uses modelled efficiency (Wh/mi) against usable pack energy at ~90% depth of discharge. Figures are rounded and intended for comparison, not as guarantees.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Cost &amp; parts basis</h3>
+        <p class="muted small">Component prices reflect mid-2026 US conversion-market pricing from vendors such as EV West, ampREVOLT and NetGain, with salvage ranges for Tesla hardware. Costs are parts-only and exclude the donor vehicle, registration, and labour. A direct-drive build is defined here as a single fixed reduction with no shiftable gearbox.</p>
+      </div>
+    </div>
+    <div class="callout reveal">
+      <span class="pill">Safety</span>&nbsp; High-voltage EV work is hazardous. A compliant build needs proper HV interlocks, fusing, isolation monitoring and, in many jurisdictions, an inspection. Treat this study as a design comparison, not assembly instructions.
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap grid g2">
+    <div>
+      <h4>Chevette EV Conversion Study</h4>
+      <p class="muted small">A design comparison of three electric conversions for the rear-drive Chevrolet Chevette — two direct-drive, one gearbox-retained — compared on cost, range, acceleration and top speed. Built as a static site and published via GitHub Pages.</p>
+      <p class="small muted">© <span id="year">2026</span> · Engineering estimates for comparison only.</p>
+    </div>
+    <div>
+      <h4>Selected references</h4>
+      <ul class="small">
+        <li><a href="https://evwest.com/netgain-hyper9-hv-ac-motor-x144-controller-kit-144-volt" rel="noopener">EV West — NetGain HyPer 9 HV + X144 kit</a></li>
+        <li><a href="https://www.go-ev.com/" rel="noopener">NetGain Motors — HyPer 9 specifications</a></li>
+        <li><a href="https://evwest.com/tesla-products" rel="noopener">EV West — Tesla Large Drive Unit packages</a></li>
+        <li><a href="https://insideevs.com/news/758494/tesla-ldu-ev-swap-v8/" rel="noopener">InsideEVs — the Tesla LDU as the "V8 of EVs"</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Chevrolet_Chevette" rel="noopener">Chevrolet Chevette — platform overview</a></li>
+        <li><a href="https://amprevolt.com/products/tesla-model-s-5-3kwh-battery-module" rel="noopener">ampREVOLT — Tesla 5.3 kWh battery module</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
