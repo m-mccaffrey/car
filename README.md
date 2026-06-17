@@ -30,14 +30,16 @@ subsystem and a methodology/assumptions section.
 index.html            # the comparison site (single page)
 assets/style.css      # styles
 assets/script.js      # chart animation + reveal-on-scroll
-.github/workflows/    # GitHub Pages deployment
+.nojekyll             # serve assets without Jekyll processing
 ```
 
 ## Deployment
 
-Published with **GitHub Pages** via GitHub Actions
-(`.github/workflows/deploy-pages.yml`). The workflow runs on push to the
-development branch and deploys the static site.
+Published with **GitHub Pages** in *Deploy from a branch* mode:
+**Settings → Pages → Source: "Deploy from a branch" → Branch:
+`claude/chevette-ev-conversion-1qtb5a`, folder `/ (root)`**.
+
+Once enabled, the site is live at <https://m-mccaffrey.github.io/car/>.
 
 > Performance and cost figures are engineering estimates for comparison only —
 > not assembly instructions. High-voltage EV work is hazardous.
